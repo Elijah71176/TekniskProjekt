@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Welcome to home page</title>
+
+
+
 </head>
 <body>
-$END$
+<h1>This is HomePage.</h1>
+<h2 th:text="${user}"> </h2>
+
+<div th:each="onePlayer: ${players}">
+
+    <h2 th:text=" ${onePlayer.getName()}"></h2>
+    <h2 th:text=" ${onePlayer.getAge()}"></h2>
+
+</div>
+
+
+
 </body>
 </html>
