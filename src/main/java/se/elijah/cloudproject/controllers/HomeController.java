@@ -26,7 +26,8 @@ public class HomeController extends BaseController {
 
     @GetMapping("/profile")
     public String profile(Model model) {
-        String user = getLoggedInEmail();
+//        String user = getLoggedInEmail();
+        String user = SecurityContextHolder.getContext().getAuthentication().getName();
         model.addAttribute("user", user);
         return "profile";
     }

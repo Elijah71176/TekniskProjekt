@@ -3,20 +3,25 @@ package se.elijah.cloudproject.Model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "HockeyPlayer")
+@Table(name = "hockey_player")
 public class HockeyPlayer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "Name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "Age")
+    @Column(name = "age")
     private int age;
 
-    // Getters and Setters
+    // No-arg constructor (JPA needs this)
+    public HockeyPlayer() {
+    }
+
+    // Getters & Setters
+
     public Long getId() {
         return id;
     }

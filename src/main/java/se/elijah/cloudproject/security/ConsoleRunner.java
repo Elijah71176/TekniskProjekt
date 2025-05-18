@@ -24,6 +24,7 @@ public class ConsoleRunner implements CommandLineRunner {
             hockeyPlayer.setAge(43);
             hockeyPlayer.setName("Tony");
             hockeyPlayerRepository.save(hockeyPlayer);
+
         }
     }
 }
