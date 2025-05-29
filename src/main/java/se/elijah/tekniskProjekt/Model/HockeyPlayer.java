@@ -1,4 +1,4 @@
-package se.elijah.cloudproject.Model;
+package se.elijah.tekniskProjekt.Model;
 
 import jakarta.persistence.*;
 

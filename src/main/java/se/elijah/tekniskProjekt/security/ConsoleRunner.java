@@ -1,10 +1,10 @@
-package se.elijah.cloudproject.security;
+package se.elijah.tekniskProjekt.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import se.elijah.cloudproject.Model.HockeyPlayer;
-import se.elijah.cloudproject.Model.HockeyPlayerRepository;
+import se.elijah.tekniskProjekt.Model.HockeyPlayer;
+import se.elijah.tekniskProjekt.Model.HockeyPlayerRepository;
 
 @Component
 public class ConsoleRunner implements CommandLineRunner {
@@ -17,7 +17,7 @@ public class ConsoleRunner implements CommandLineRunner {
         if (hockeyPlayerRepository.count() == 0) {
             HockeyPlayer hockeyPlayer = new HockeyPlayer();
             hockeyPlayer.setAge(30);
-            hockeyPlayer.setName("Stefan");
+            hockeyPlayer.setName("Elijah");
             hockeyPlayerRepository.save(hockeyPlayer);
 
             hockeyPlayer = new HockeyPlayer();

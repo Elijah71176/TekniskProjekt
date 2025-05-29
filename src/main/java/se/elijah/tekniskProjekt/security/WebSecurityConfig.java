@@ -1,4 +1,4 @@
-package se.elijah.cloudproject.security;
+package se.elijah.tekniskProjekt.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

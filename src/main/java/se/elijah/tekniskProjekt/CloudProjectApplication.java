@@ -1,4 +1,4 @@
-package se.elijah.cloudproject;
+package se.elijah.tekniskProjekt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
