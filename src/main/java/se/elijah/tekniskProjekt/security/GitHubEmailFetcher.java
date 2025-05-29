@@ -1,4 +1,4 @@
-package se.elijah.cloudproject.security;
+package se.elijah.tekniskProjekt.security;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;

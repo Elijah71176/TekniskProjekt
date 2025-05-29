@@ -1,4 +1,4 @@
-package se.elijah.cloudproject.security;
+package se.elijah.tekniskProjekt.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
