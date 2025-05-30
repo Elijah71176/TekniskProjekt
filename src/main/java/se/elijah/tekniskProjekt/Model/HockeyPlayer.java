@@ -3,7 +3,7 @@ package se.elijah.tekniskProjekt.Model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "hockey_player")
+@Table(name = "hockeyPlayer")
 public class HockeyPlayer {
 
     @Id
