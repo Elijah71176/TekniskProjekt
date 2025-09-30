@@ -20,22 +20,20 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(request -> request
-               .requestMatchers("/","/css/**","/js/**","/images/**", "/api/v1/auth/**", "/login/**", "oauth_login*", "/oauth2/authorization/**","/logout/**","/login?logout").permitAll()
+                .requestMatchers("/", "/css/**", "/js/**", "/images/**", "/api/v1/auth/**", "/login/**", "oauth_login*", "/oauth2/authorization/**", "/logout/**", "/login?logout").permitAll()
                 //.requestMatchers("/","/css/**","/js/**","/images/**", "/api/v1/auth/**", "/login/**", "oauth_login*", "/oauth2/authorization/**","/logout/**","/login?logout").permitAll()
 
-                .anyRequest().authenticated());
+                .anyRequest().authenticated()
+        );
         http.csrf(AbstractHttpConfigurer::disable)
                 .cors(AbstractHttpConfigurer::disable)
-
-                .oauth2Login(oauth2 -> {
-                            oauth2.userInfoEndpoint(userInfo -> userInfo.userService(customOauth2UserService));
-                        }
+                .oauth2Login(oauth2 -> oauth2
+                        .userInfoEndpoint(userInfo -> userInfo.userService(customOauth2UserService))
+                        .defaultSuccessUrl("/profile?loginSuccess=true", true)
                 );
+
         http.sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.ALWAYS));
-
-
 
         return http.build();
     }
-
 }
